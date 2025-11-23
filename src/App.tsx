@@ -12,6 +12,7 @@ function App() {
     client.models.Todo.observeQuery().subscribe({
       next: (data) => setTodos([...data.items]),
     });
+
   }, []);
 
   function deleteTodo(id: string) {
